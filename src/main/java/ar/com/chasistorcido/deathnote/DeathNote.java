@@ -1,5 +1,6 @@
 package ar.com.chasistorcido.deathnote;
 
+import ar.com.chasistorcido.deathnote.commands.SpawnDeathNote;
 import co.aikar.commands.PaperCommandManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -16,7 +17,7 @@ public class DeathNote extends JavaPlugin {
     }
 
     private void registerCommands() {
-//        commandManager.registerCommand(new SpawnDeathNote(this));
+        commandManager.registerCommand(new SpawnDeathNote(this));
     }
 
     @Override
