@@ -6,6 +6,8 @@ import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
 import co.aikar.commands.annotation.Default;
 import org.bukkit.Bukkit;
+import org.bukkit.EntityEffect;
+import org.bukkit.Particle;
 import org.bukkit.WorldBorder;
 import org.bukkit.entity.Player;
 import org.bukkit.metadata.FixedMetadataValue;
@@ -29,6 +31,7 @@ public class ToggleShinigamiEyes extends BaseCommand {
     private void disableEyes(Player player) {
         removeTint(player);
         ShinigamiEyesScoreBoard.getNoTeam().addPlayer(player);
+        player.resetMaxHealth();
     }
 
     private void removeTint(Player player) {
@@ -41,6 +44,8 @@ public class ToggleShinigamiEyes extends BaseCommand {
     private void enableEyes(Player player) {
         showTint(player);
         ShinigamiEyesScoreBoard.getTeam().addPlayer(player);
+        player.setMaxHealth(10);
+        player.playEffect(EntityEffect.TOTEM_RESURRECT);
     }
 
     private void showTint(Player player) {
