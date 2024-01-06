@@ -32,7 +32,7 @@ public class EntitySpawnEvent implements Listener {
         Random random = new Random();
         String randomName = names.get(random.nextInt(names.size()));
         livingEntity.setCustomName(randomName);
-        livingEntity.setCustomNameVisible(true);
+        if (!livingEntity.isInvisible())livingEntity.setCustomNameVisible(true);
     }
 
     @EventHandler
