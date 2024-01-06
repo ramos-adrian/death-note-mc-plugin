@@ -14,6 +14,7 @@ public class DeathNote extends JavaPlugin {
     public void onEnable() {
         super.onEnable();
         getLogger().info("DeathNote enabled");
+        saveDefaultConfig();
         commandManager = new PaperCommandManager(this);
         registerCommands();
         registerEvents();

@@ -11,7 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class DeathNoteItem {
     private static ItemStack deathNote;
-    private static NamespacedKey DEATH_NOTE_KEY;
+    private static NamespacedKey DEATH_NOTE_KEY = new NamespacedKey(getMainPluginInstance(), "death_note");;
 
     private DeathNoteItem() {
         // Private constructor to prevent instantiation
@@ -19,7 +19,6 @@ public class DeathNoteItem {
 
     public static ItemStack getInstance() {
         if (deathNote == null) {
-            DEATH_NOTE_KEY = new NamespacedKey(getMainPluginInstance(), "death_note");
             deathNote = new ItemStack(Material.WRITABLE_BOOK);
             ItemMeta im = deathNote.getItemMeta();
             im.setDisplayName(ChatColor.WHITE + "Death Note");

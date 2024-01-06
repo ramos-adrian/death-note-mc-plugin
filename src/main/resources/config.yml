@@ -1,0 +1,52 @@
+deathCauses:
+  BEES:
+    - "abejas"
+    - "picado"
+    - "picadura"
+  CACTUS:
+    - "cactus"
+    - "pinchos"
+    - "pinchazo"
+  DROWNING:
+    - "agua"
+    - "ahogado"
+    - "ahogamiento"
+  FIRE:
+    - "fuego"
+    - "quemado"
+    - "quemadura"
+  SUFFOCATION:
+    - "sofocado"
+    - "sofocamiento"
+  LAVA:
+    - "lava"
+  LIGHTNING:
+    - "rayo"
+  POISON:
+    - "veneno"
+    - "envenenado"
+    - "envenenamiento"
+  EXPLOSION:
+    - "explosion"
+    - "explosivo"
+    - "explosiva"
+    - "TNT"
+  ARROWS:
+    - "flecha"
+    - "flechas"
+    - "flechazo"
+    - "flechado"
+    - "flechazos"
+  WOLFS:
+    - "lobo"
+    - "lobos"
+    - "perro"
+    - "perros"
+    - "mordido"
+    - "mordida"
+    - "mordedura"
+    - "rabia"
+  GIANT:
+    - "gigante"
+    - "gigantes"
+    - "giant"
