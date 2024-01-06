@@ -1,6 +1,7 @@
 package ar.com.chasistorcido.deathnote;
 
 import ar.com.chasistorcido.deathnote.commands.SpawnDeathNote;
+import ar.com.chasistorcido.deathnote.commands.ToggleShinigamiEyes;
 import ar.com.chasistorcido.deathnote.events.EntitySpawnEvent;
 import ar.com.chasistorcido.deathnote.events.PlayerEditDeathNote;
 import co.aikar.commands.PaperCommandManager;
@@ -28,6 +29,7 @@ public class DeathNote extends JavaPlugin {
 
     private void registerCommands() {
         commandManager.registerCommand(new SpawnDeathNote(this));
+        commandManager.registerCommand(new ToggleShinigamiEyes(this));
     }
 
     @Override
