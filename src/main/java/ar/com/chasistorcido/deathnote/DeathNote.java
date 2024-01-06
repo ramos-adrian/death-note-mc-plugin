@@ -1,7 +1,9 @@
 package ar.com.chasistorcido.deathnote;
 
 import ar.com.chasistorcido.deathnote.commands.SpawnDeathNote;
+import ar.com.chasistorcido.deathnote.events.PlayerEditDeathNote;
 import co.aikar.commands.PaperCommandManager;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class DeathNote extends JavaPlugin {
@@ -14,6 +16,11 @@ public class DeathNote extends JavaPlugin {
         getLogger().info("DeathNote enabled");
         commandManager = new PaperCommandManager(this);
         registerCommands();
+        registerEvents();
+    }
+
+    private void registerEvents() {
+        Bukkit.getPluginManager().registerEvents(new PlayerEditDeathNote(this), this);
     }
 
     private void registerCommands() {
