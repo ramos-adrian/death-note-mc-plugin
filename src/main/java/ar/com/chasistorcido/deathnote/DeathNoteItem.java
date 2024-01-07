@@ -37,4 +37,13 @@ public class DeathNoteItem {
     private static JavaPlugin getMainPluginInstance() {
         return JavaPlugin.getPlugin(DeathNote.class);
     }
+
+    public static boolean isDeathNote(ItemStack item) {
+        if (item == null) return false;
+        ItemMeta im = item.getItemMeta();
+        if (im == null) return false;
+        PersistentDataContainer pdc = im.getPersistentDataContainer();
+        if (pdc == null) return false;
+        return pdc.has(DEATH_NOTE_KEY, PersistentDataType.BOOLEAN);
+    }
 }

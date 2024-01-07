@@ -25,6 +25,7 @@ public class DeathNote extends JavaPlugin {
     private void registerEvents() {
         Bukkit.getPluginManager().registerEvents(new PlayerEditDeathNote(this), this);
         Bukkit.getPluginManager().registerEvents(new EntitySpawnEvent(this), this);
+        Bukkit.getPluginManager().registerEvents(new ShinigamiManager(this), this);
     }
 
     private void registerCommands() {

@@ -17,7 +17,6 @@ public class EntitySpawnEvent implements Listener {
 
     public EntitySpawnEvent(DeathNote plugin) {
         this.plugin = plugin;
-        Bukkit.getPluginManager().registerEvents(this, plugin);
     }
 
     @EventHandler

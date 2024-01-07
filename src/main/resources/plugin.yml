@@ -3,3 +3,4 @@ name: DeathNote
 version: 1.0
 author: Chasistorcido
 api-version: 1.20
+depend: [Citizens, DeluxeMenus]
