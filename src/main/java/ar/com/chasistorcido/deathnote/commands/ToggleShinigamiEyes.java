@@ -38,7 +38,6 @@ public class ToggleShinigamiEyes extends BaseCommand {
         player.removeMetadata("death_note_shinigami_eyes", plugin);
         WorldBorder wb = player.getWorld().getWorldBorder();
         player.setWorldBorder(wb);
-        player.sendMessage("Shinigami Eyes disabled");
     }
 
     private void enableEyes(Player player) {
@@ -54,7 +53,6 @@ public class ToggleShinigamiEyes extends BaseCommand {
         wb.setCenter(player.getLocation());
         wb.setWarningDistance(Integer.MAX_VALUE);
         player.setWorldBorder(wb);
-        player.sendMessage("Shinigami Eyes enabled");
     }
 
 }
