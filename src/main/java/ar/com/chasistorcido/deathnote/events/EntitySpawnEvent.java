@@ -22,6 +22,7 @@ public class EntitySpawnEvent implements Listener {
     @EventHandler
     public void onEntitySpawn(org.bukkit.event.entity.EntitySpawnEvent event) {
         if (!(event.getEntity() instanceof LivingEntity livingEntity))return;
+        if (livingEntity.isInvisible()) return;
         setRandomCustomName(livingEntity);
         ShinigamiEyesScoreBoard.getTeam().addEntity(event.getEntity());
     }
