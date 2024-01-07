@@ -20,6 +20,7 @@ public class ShinigamiEyesScoreBoard {
             scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
             Team team = scoreboard.registerNewTeam(TEAM_NAME);
             team.setOption(Team.Option.NAME_TAG_VISIBILITY, Team.OptionStatus.FOR_OTHER_TEAMS);
+            team.setCanSeeFriendlyInvisibles(false);
             team.color(NamedTextColor.DARK_RED);
             Team noTeam = scoreboard.registerNewTeam(NO_TEAM_NAME);
             team.setAllowFriendlyFire(false);

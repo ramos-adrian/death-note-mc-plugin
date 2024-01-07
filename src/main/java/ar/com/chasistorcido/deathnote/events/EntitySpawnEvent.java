@@ -50,4 +50,11 @@ public class EntitySpawnEvent implements Listener {
             ShinigamiEyesScoreBoard.getTeam().addEntity(livingEntity);
         }
     }
+
+    @EventHandler
+    public void onPlayerDeath(org.bukkit.event.entity.PlayerDeathEvent event) {
+        Player player = event.getEntity();
+        ShinigamiEyesScoreBoard.getNoTeam().addPlayer(player);
+    }
+
 }
